@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(212, 45%, 89%);
+$grayish-blue: hsl(220, 15%, 55%);
+$dark-blue: hsl(218, 44%, 22%);
+$font: 'Outfit', sans-serif;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+// A reusable mixin for flexbox with center alignment on both axes
+@mixin display-flex-center($direction: row, $gap: 0) {
+	gap: $gap;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: $direction;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: $font;
+
+	body {
+		margin: 0;
+		padding: 0 1rem;
+		display: flex;
+		min-height: 100vh;
+		background: $light-gray;
+		@include display-flex-center(column, 2rem);
+	}
+
+	main {
+		@include display-flex-center();
+	}
+
+	.qr-container {
+    padding: 2rem;
+		max-width: 35rem;
+    text-align: center;
+    border-radius: 2rem;
+		background: $white;
+		box-shadow: 2px 2px 2px 2px $light-gray;
+
+		&__image {
+			width: 100%;
+			object-fit: cover;
+			border-radius: 1rem;
+		}
+
+		&__title {
+			font-weight: 700;
+			color: $dark-blue;
+			font-size: 2.4rem;
+		}
+
+		&__subtitle {
+			font-weight: 400;
+			font-size: 1.5rem;
+			padding: 0 2rem;
+			color: $grayish-blue;
+		}
+	}
+
+	footer {
+		font-size: 1.2rem;
+		text-align: center;
+    
+		& a {
+			color: hsl(228, 45%, 44%);
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+  "name": "qr-code-component",
+  "version": "1.0.0",
+  "description": "An implementation of the QR Code component challenge hosted by Frontend Mentor",
+  "repository": "https://github.com/Abhirocks889/QR-Code-Component.git",
+  "author": "Abhishek Buragohain",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "compile:sass": "sass --no-source-map src/styles.scss:src/styles.css",
+    "compile:sass:watch": "sass --no-source-map --watch src/styles.scss:src/styles.css"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}
